@@ -43,7 +43,7 @@ function Login() {
         Cookies.set("token", response.data.token);
 
         //redirect to dashboard
-        Router.push("/dashboard");
+        Router.push("/");
       })
       .catch((error) => {
         //assign error to state "validation"
@@ -56,7 +56,7 @@ function Login() {
     //check token
     if (Cookies.get("token")) {
       //redirect page dashboard
-      Router.push("/dashboard");
+      Router.push("/");
     }
   }, []);
 
